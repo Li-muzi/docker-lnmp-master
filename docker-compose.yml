@@ -15,7 +15,7 @@ services:
       build:
         context: ./php
       volumes:
-        - E:\site\offical.com:/var/www/html
+        - E:\site\offical.com:/var/www/
       expose:
         - "9000"
       depends_on:
@@ -27,7 +27,7 @@ services:
       build:
         context: ./nginx
       volumes:
-          - E:\site\offical.com:/var/www/html/hngaole.cn
+          - E:\site\offical.com:/var/www/
       ports:
           - "80:80"
       depends_on:
