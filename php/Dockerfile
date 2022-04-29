@@ -1,4 +1,4 @@
-FROM php:5.5.29-fpm
+FROM php:7.2-fpm
 
 ENV TZ=Asia/Shanghai
 ADD sources.list /etc/apt/sources.list
