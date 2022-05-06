@@ -17,7 +17,7 @@ services:
       volumes:
         - E:\site\offical.com:/var/www/
       expose:
-        - "9000"
+        - "9888"
       depends_on:
         - mysql
 
@@ -40,7 +40,7 @@ services:
       volumes:
         - E:\site\1sql\offical.com:/var/lib/mysql
       ports:
-        - "3306:3306"
+        - "3316:3306"
       environment:
         - MYSQL_ROOT_PASSWORD=123456
 
