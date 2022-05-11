@@ -30,9 +30,9 @@ services:
           - E:\site\offical.com:/var/www/offical.com
           - E:\site\hngaole.cn:/var/www/hngaole.cn
           - E:\site\hunangaole.cn:/var/www/hunangaole.cn
-          - E:\site\hunangaole.cn:/var/www/mmiying.com
-          - E:\site\hunangaole.cn:/var/www/qingzhi
-          - E:\site\hunangaole.cn:/var/www/shanin
+          - E:\site\mmiying.com:/var/www/mmiying.com
+          - E:\site\qingzhi.cn:/var/www/qingzhi
+          - E:\site\shanin:/var/www/shanin
       ports:
           - "80:80"
       depends_on:
