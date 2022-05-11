@@ -15,7 +15,7 @@ services:
       build:
         context: ./php7
       volumes:
-        - E:\site\offical.com:/var/www/offical.com
+        - /home/code/offical.com:/var/www/offical.com
       expose:
         - "9000"
       depends_on:
@@ -27,63 +27,24 @@ services:
       build:
         context: ./nginx
       volumes:
-          - E:\site\offical.com:/var/www/offical.com
-          - E:\site\hngaole.cn:/var/www/hngaole.cn
-          - E:\site\hunangaole.cn:/var/www/hunangaole.cn
-          - E:\site\hunangaole.cn:/var/www/mmiying.com
-          - E:\site\hunangaole.cn:/var/www/qingzhi
-          - E:\site\hunangaole.cn:/var/www/shanin
+          - /home/code/offical.com:/var/www/offical.com
+          - /home/code/hngaole.cn:/var/www/hngaole.cn
+          - /home/code/hunangaole.cn:/var/www/hunangaole.cn
+          - /home/code/mmiying.com:/var/www/mmiying.com
+          - /home/code/qingzhi:/var/www/qingzhi
+          - /home/code/shanin:/var/www/shanin
+          - /home/code/ssl
       ports:
           - "80:80"
       depends_on:
           - php-fpm7
-
-#    nginx-hngaole.cn:
-#      build:
-#        context: ./nginx-hngaole.cn
-#      volumes:
-#        - E:\site\hngaole.cn:/var/www/
-#      ports:
-#        - "81:80"
-
-#    nginx-hunangaole.cn:
-#      build:
-#        context: ./nginx-hunangaole.cn
-#      volumes:
-#        - E:\site\hunangaole.cn:/var/www/
-#      ports:
-#        - "82:80"
-
-#    nginx-mmiying.com:
-#      build:
-#        context: ./nginx-mmiying.com
-#      volumes:
-#        - E:\site\mmiying.com:/var/www/
-#      ports:
-#        - "83:80"
-
-#    nginx-qingzhi:
-#      build:
-#        context: ./nginx-qingzhi
-#      volumes:
-#        - E:\site\qingzhi:/var/www/
-#      ports:
-#        - "84:80"
-
-#    nginx-shanin:
-#      build:
-#        context: ./nginx-shanin
-#      volumes:
-#        - E:\site\shanin:/var/www/
-#      ports:
-#        - "85:80"
 
 ### MySQL Container #########################################
 
     mysql:
       image: mysql:5.6
       volumes:
-        - E:\site\1sql\offical.com:/var/lib/mysql
+        - /home/code/offical.com:/var/lib/mysql
       ports:
         - "3306:3306"
       environment:
