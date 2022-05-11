@@ -28,12 +28,14 @@ services:
         context: ./nginx
       volumes:
           - /home/code/offical.com:/var/www/offical.com
-          - /home/code/hngaole.cn:/var/www/hngaole.cn
+          - /home/code/hngaojia.cn:/var/www/hngaojia.cn
           - /home/code/hunangaole.cn:/var/www/hunangaole.cn
           - /home/code/mmiying.com:/var/www/mmiying.com
           - /home/code/qingzhi:/var/www/qingzhi
           - /home/code/shanin:/var/www/shanin
-          - /home/code/ssl
+          - /home/code/onesite:/var/www/onesite
+          - /home/code/ssl:/home/code/ssl
+          - /home/code/conf:/etc/nginx/conf.d/
       ports:
           - "80:80"
       depends_on:
@@ -45,8 +47,9 @@ services:
       image: mysql:5.6
       volumes:
         - /home/code/offical.com:/var/lib/mysql
+        - /home/code/sql:/home/code/sql
       ports:
-        - "3306:3306"
+        - "3316:3306"
       environment:
         - MYSQL_ROOT_PASSWORD=123456
 
