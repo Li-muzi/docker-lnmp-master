@@ -9,6 +9,7 @@ RUN docker-php-ext-install -j$(nproc) bcmath calendar exif gettext \
     pdo_mysql
 
 RUN apt-get update && apt-get install -y \
-    vim
+    vim \
+    procps
 RUN chown -R www-data.www-data /offical.com
-#COPY ./php.ini /usr/local/etc/php/conf.d/php.ini
+COPY ./php.ini /usr/local/etc/php/conf.d/php.ini

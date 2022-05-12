@@ -4,7 +4,8 @@ ENV TZ=Asia/Shanghai
 ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y \
-    vim
+    vim \
+    procps
 RUN chown -R www-data.www-data /var/www
 #COPY conf/official.conf /etc/nginx/conf.d/official.conf
 #COPY conf/hngaojia.conf /etc/nginx/conf.d/hngaole.cn.conf
