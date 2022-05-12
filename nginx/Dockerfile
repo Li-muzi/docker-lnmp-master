@@ -5,6 +5,7 @@ ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update && apt-get install -y \
     vim
+RUN chown -R www-data.www-data /var/www
 #COPY conf/official.conf /etc/nginx/conf.d/official.conf
 #COPY conf/hngaojia.conf /etc/nginx/conf.d/hngaole.cn.conf
 #COPY conf/hunangaole.cn.conf /etc/nginx/conf.d/hunangaole.cn.conf

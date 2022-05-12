@@ -35,9 +35,11 @@ services:
           - /home/code/shanin:/var/www/shanin
           - /home/code/onesite:/var/www/onesite
           - /home/code/ssl:/home/code/ssl
-          - /home/code/conf:/etc/nginx/conf.d/
+          - /home/code/conf:/etc/nginx/conf.d
+          - /home/code/nginx_log:/var/www/nginx_log
       ports:
           - "80:80"
+          - "443:443"
       depends_on:
           - php-fpm7
 
